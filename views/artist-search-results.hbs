@@ -1,0 +1,15 @@
+{{#if artists}}
+    {{#each artists}}
+    <div>
+        <h5>{{this.name}}</h5>
+        {{#each images}}
+        {{#if @first}}
+        <img src="{{this.url}}" style="width:100px; height: 150px;"/> 
+        {{/if}}
+        {{/each}}
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+{{else}}
+<p>The results of your search will appear here</p>
+{{/if}}
